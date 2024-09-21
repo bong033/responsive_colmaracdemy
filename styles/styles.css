@@ -1,0 +1,595 @@
+/* import font from Google CDN */
+@import url('href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Source+Sans+Pro:wght@300;400&display=swap"');
+
+
+/* Reset CSS */
+/* Universal selector (*) targets every element (regardless tag, class, ID) */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* If pseudo class :root is used, :root takes priority over html element */
+/* When applied, font size of 5px takes priority over that of html */
+/* :root{ font-size: 5px; } */
+
+/* Here, html selector takes priority as root element over universal selector */
+html, body{
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: [full--start] 0.6fr [center--end center--start] 0.4fr [full--end];
+    grid-template-rows: repeat(6, min-content);
+}
+
+/** Start of Desktop Section **/
+/** ************************ **/
+
+/* Set up the navbar for the desktop */
+.desktop-nav{
+    grid-column: full--start / full--end;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+}
+
+.desktop-nav > a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+/* Set up logo styles */
+.logo{
+    height: 2rem;
+    width: auto;
+    padding-left: 1.5rem;
+}
+
+.logo-name{
+    font-size: 1rem;
+    text-transform: uppercase;    
+}
+
+.logo-name-bold{
+    font-weight: bold;
+    color: #484848;
+}
+
+.logo-name-thin{
+    font-weight: 400;
+    color: #aaa;
+}
+
+.nav-list{
+    list-style: none;
+    display: flex;
+}
+
+/* Set up navigation links' styles */
+.nav-link{
+    display: inline-block;
+    text-decoration: none;
+    color: #828282;
+    font-size: 1rem;
+}
+
+.nav-item:not(:last-child){
+    margin-right: 1rem;
+}
+
+.nav-item:last-child{
+    margin-right: 1.5rem;
+}
+
+/* Set up header area */
+.header-picture{
+    background-color: #c8c8c8;
+    display: flex;
+}
+
+.header-picture img{
+    width: 100%;
+    height: auto;
+    padding: 2rem 0 2rem 1.5rem;
+}
+
+.header-content{
+    background-color: #c8c8c8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 1.5rem;
+}
+
+.header-content div h1{
+    font-size: 1.4rem;
+    color: #484848;
+}
+
+.header-content div h2{
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #484848;
+    padding: 1rem 0;
+}
+
+.header-content div{
+    display: block;
+    width: 80%;
+}
+
+.header-content div a:link{
+    display: block;
+    width: 100%;
+    align-self: stretch;
+    margin: 1rem auto;
+    padding: 0.5rem 0;
+    background-color: #484848;
+    color: #fff;
+    font-size: 0.8rem;
+    text-decoration: none;
+    text-align: center;
+}
+
+/* hover effect for call to action link */
+.header-content div a:hover{
+    background-color: rgb(72, 72, 72, 0.5);
+}
+
+.header-content div a:visited, 
+.header-content div a:active{
+    color: #fff;
+    text-decoration: none;
+    background-color: #484848;
+}
+
+/* Set up practice section */
+.practice{
+    background-color: #f0f0f0;
+    padding: 2rem 1.5rem;
+}
+
+.practice img{
+    width: 100%;
+    height: auto;
+}
+
+.practice h3{
+    font-size: x-large;
+    padding: 2rem 0;
+    color: #484848;
+}
+
+.practice p{
+    font-size: small;
+    color: #484848;
+}
+
+.quote-name{
+    display: block;
+    margin: 2rem 0;
+}
+
+.events{
+    background-color: #f0f0f0;
+    display: grid;
+    grid-template-rows: repeat(3, min-content);
+    border-left: 1px solid #e7e7e7;
+    padding-top: 1rem;
+}
+
+.event-block{
+    display: grid;
+    grid-template-columns: 0.4fr 0.6fr;
+    align-items: center;
+    border-bottom: 1px solid #e7e7e7;
+    font-size: small;
+    color: #484848;;
+}
+
+.event-block img{
+    width: 100%;
+    height: auto;
+    padding: 1rem
+}
+
+.event-block-content{
+    margin: 0 2rem;
+}
+
+.event-block-content h4{
+    font-size: 1rem;
+}
+
+.event-block-content p{
+    font-size: 0.8rem;
+    padding: 0.5rem 0 0.5rem 0;
+}
+
+.event-block-content a:link{
+    color: #6c8fef;
+    font-size: 0.8rem;
+    text-decoration: none;
+}
+
+.event-block-content a:visited, 
+.event-block-content a:active{
+    color: #6c8fef;
+    font-size: 0.8rem;
+    text-decoration: none;
+}
+
+.event-block:last-child{
+	background-color:#cecbcb;
+}
+
+/* Set up Start learning section */
+
+.start-learning {
+    grid-column: full--start / full--end; 
+    display: flex;
+    flex-direction: column;
+    background-color: #e3e3e3;
+    width: 100%;
+}
+
+.start-learning-header {
+    display: flex;
+    font-size: 1.3rem;
+    color: #484848;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.course-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 0 4.5rem 2rem 4.5rem;
+}
+
+.course-module {
+    display: block;
+    background-color: #fff;  
+}
+
+.course-module:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all 0.5s ease-out;
+}
+
+.course-image {
+    width: 100%;
+    height: auto;   
+}
+
+.course-module h2 {
+    font-size: large;
+    padding: 1rem 0 0 1rem;
+    color: #484848;
+}
+
+.course-label {
+    font-size: small;
+    padding: 0.5rem 0 0.5rem 1rem;
+    color: #484848;
+}
+
+.course-detail {
+    padding: 0 0 1.5rem 1rem;
+    color: #484848;
+    font-size: small
+}
+
+/* Set up Thesis section */
+
+.thesis {
+    grid-column: full--start / full--end; 
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    width: 100%;
+}
+
+.thesis-header {
+    display: flex;
+    color: #484848;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.thesis-content {
+    display: grid;
+    grid-template-columns: 0.6fr 0.4fr;
+}
+
+.thesis-video {
+    padding: 0 1.5rem;
+}
+
+.thesis h4 {
+    font-size: larger;
+    padding: 1.5rem 0 0.5rem 0;
+}
+
+.thesis p {
+    font-size: small;
+    padding-bottom: 2rem;
+}
+
+.thesis-article {
+    display: flex; 
+    flex-direction: column;   
+}
+
+.thesis-news, .thesis-news-1 {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    padding-left: 1rem;  
+}
+
+.thesis-news {
+    background-color: #c8c8c8;
+}
+
+.thesis img {
+    width: 100%;
+    height: auto;  
+    padding: 1rem 0;
+}
+
+.thesis-info {
+    display: block;
+    padding-left: 1rem;
+}
+
+/* Set up Footer section */
+
+footer {
+    display: flex;
+    grid-column: full--start / full--end;
+    font-size: 0.8rem;
+    color: #303646;
+    padding: 1rem 0 1.5rem 1.5rem;
+}
+
+footer p {
+    margin-right: auto;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    margin-right: 1.5rem;
+}
+
+footer ul li:not(:last-child) {
+    margin-right: 1rem;
+}
+
+footer a:link {
+    text-decoration: none;
+    color: #303646;
+
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: rgba(48, 53, 70, 0.5);
+}
+
+footer a:visited, footer a:active {
+    color: #fff;
+    text-decoration: none;
+    color: #303646;
+}
+
+
+/** ********************** **/
+/** End of Desktop Section **/
+
+
+/** Start of Mobile Section **/
+/** *********************** **/
+
+.mobile-nav {
+    display: none;
+}
+
+.events-mobile {
+    display: none;
+}
+
+.mobile-start-learning {
+    display: none;
+}
+
+.mobile-thesis {
+    display: none;
+}
+
+/* if the width of screen is 640px, aka 40rem */
+@media screen and (max-width: 40rem ) {
+
+    .mobile-nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        grid-column: full--start / full--end;
+        height: 4rem;
+    }
+
+    .desktop-nav{
+        display: none;
+    }
+
+    .container{
+        /* max-width: 100dvw; */
+        /* display: grid; */
+        /* grid-template-columns: 1fr; */
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .header-picture img{
+        padding: 0;
+        width: 100%;
+        object-fit: cover; 
+    }
+
+    .header-content{
+        /* display: flex; */
+        /* grid-column: full--start / full--end; */
+        
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        padding: 2rem 1rem 2rem 1rem;
+    }
+
+    .header-content div h1{
+        font-size: xx-large;
+        padding: 0 0 2rem 0;
+    }
+
+    .header-content div h2{
+        font-size: larger;
+        padding: 0 0 1.5rem 0; 
+    }
+
+    .header-content div{
+        display: block;
+        width: 100%;
+    }
+    
+    .header-content div a:link{
+        display: block;
+        width: 100%;
+        align-self: stretch;
+        background-color: rgb(72, 72, 72, 0.5);
+        color: #fff;
+        font-size: 1rem;
+        text-decoration: none;
+        text-align: center;
+    }
+    
+    /* hover effect for call to action link */
+    .header-content div a:hover{
+        background-color: #484848;
+    }
+    
+    .header-content div a:visited, 
+    .header-content div a:active{
+        color: #fff;
+        text-decoration: none;
+        background-color: rgb(72, 72, 72, 0.5);
+    }
+
+    /* Hide desktop version of practice */
+    .practice {
+        display: none;
+    }
+
+    .events {
+        display: none;
+    }
+
+    .events-mobile {
+        display: grid;
+        padding: 1rem 1rem 0 1rem;
+    }
+
+    .events-mobile .event-block {
+        grid-template-columns: 1fr;
+    }
+
+    .events-mobile .event-block img {
+        padding: 0;
+    }
+
+    .events-mobile .event-block h4 {
+        font-size: large
+    }
+
+    .events-mobile .event-block-content {
+        padding: 2rem 0 2rem 1rem;
+        margin: 0;  
+    }
+
+    .events-mobile .event-block:last-child{
+        background-color:#fff;
+    }
+
+    .start-learning {
+        display: none;
+    }
+
+    .mobile-start-learning, .mobile-thesis {     
+         
+        display: grid;
+        grid-column: full--start / full--end;
+    }
+
+    .mobile-start-learning-header, .mobile-thesis-header  {     
+        display: flex;
+        justify-content: center;
+        padding-top: 1.5rem;
+        padding-bottom: 1rem;
+        font-size: larger;
+        color: #484848;
+    }
+
+    .mobile-course-content {
+        display: block;
+    }
+
+    .mobile-course-module {        
+        background-color: #c8c8c8;
+        margin: 0 1rem 0.5rem 1rem;
+        padding: 1rem 0 1.5rem 1rem;
+        font-weight: 700;
+    }
+
+    .mobile-course-module:hover {
+        cursor: pointer;
+        transform: scale(1.02);
+        transition: 0.5s;
+    }
+
+    .mobile-course-content hr {
+        margin-top: 2rem;
+        border: 1px solid #ededed;
+    } 
+
+    .thesis {
+        display: none;
+    }
+
+    .mobile-thesis-video {
+        padding: 0 0 1.5rem 0;
+    }
+
+    footer {
+        padding-top: 1rem;
+    }
+
+    footer a {
+        display: none;
+    }
+
+    footer p {
+        padding: 1rem 0;
+    }
+}
+
+/* *********************** */
+/** End of Mobile Section **/
